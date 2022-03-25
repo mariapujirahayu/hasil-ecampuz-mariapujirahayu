@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2022 at 05:26 AM
+-- Generation Time: Mar 25, 2022 at 08:24 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `bonus_case`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `referensi`
+--
+
+CREATE TABLE `referensi` (
+  `id_referensi` int(11) NOT NULL,
+  `instansi` varchar(50) NOT NULL,
+  `deskripsi` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `referensi`
+--
+
+INSERT INTO `referensi` (`id_referensi`, `instansi`, `deskripsi`) VALUES
+(1, 'TK 1 Pare', 'Taman Kanak Kanak 1 Pare'),
+(2, 'SDN 1 Pare', 'Sekolah Dasar Negeri 1 Pare');
 
 -- --------------------------------------------------------
 
@@ -46,6 +66,12 @@ INSERT INTO `user` (`id_user`, `password`, `username`) VALUES
 --
 
 --
+-- Indexes for table `referensi`
+--
+ALTER TABLE `referensi`
+  ADD PRIMARY KEY (`id_referensi`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -54,6 +80,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `referensi`
+--
+ALTER TABLE `referensi`
+  MODIFY `id_referensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
