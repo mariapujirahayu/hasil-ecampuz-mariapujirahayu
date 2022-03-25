@@ -22,28 +22,51 @@
                 </form>
                 <?php
                 if (isset($_POST['simpan'])) {
-                    $input = $_POST['angka'];
+                    // $input = $_POST['angka'];
                     $aplikasi[1] = 'gtAkademik';
                     $aplikasi[2] = 'gtFinansi';
                     $aplikasi[3] = 'gtPerizinan';
                     $aplikasi[4] = 'eCampuz';
                     $aplikasi[5] = 'eOviz';
 
-                    // $array = implode(",",$aplikasi);
-                    // // print_r($array);
-                    // $arrayhasil2 = explode(",", $input);
-                    // $arrayhasil = explode(",", $$array);
-                    // print_r($arrayhasil);
-
                     $i = 0;
                     while($i <= count($aplikasi)){
-                        echo "Aplikasi : $i <br>";
-                        $i++;
+                      foreach($aplikasi as $a){
+                        echo $a. "<br>";
+                      }
+                      break;
                     }
+                }
+                ?>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+            <h4>Nomor 3</h4>
+                <form method="post">
+                    Input <input type="text" name="input">
+                    Input Pembagi <input type="text" name="inputbagi">
+                    <input type="submit" name="save2" value="simpan">
+                </form>
+                <?php
+                if (isset($_POST['save2'])) {
+                    $num = $_POST['input'];
+                    $bagi = $_POST['inputbagi'];
 
-                    echo count($aplikasi);
-
-                    print_r($arrayhasil);
+                    $hasil = 0;
+                    for($i = 1; $i <= $num; $i++) {
+                        if($num >= $bagi){
+                          $num -= $bagi;
+                          $hasil++;
+                        }
+                        else{
+                          $hasil++;
+                        }
+                    }
+                    $num = $_POST['input'];
+                    echo "Input : $num <br>";
+                    echo "Pembagi : $bagi <br>";
+                    echo "hasil : $hasil";
                 }
                 ?>
             </div>
