@@ -14,3 +14,15 @@ input[type="radio"]{
     display:block;
     text-align:center;
 }
+
+/* container .logout{
+    text-align: right;
+} */
+
+.isiform{
+    margin-bottom: 10px;
+}
+
+/* .buttonadd{
+    margin-top: 10px;
+} */
