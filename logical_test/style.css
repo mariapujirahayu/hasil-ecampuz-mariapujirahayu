@@ -1,0 +1,16 @@
+body{
+    margin-top: 30px;
+}
+
+.card{
+    margin-top : 10px;
+}
+input{
+    margin-top: 10px;
+}
+
+input[type="radio"]{
+    margin: 0 15px 0 15px;
+    display:block;
+    text-align:center;
+}

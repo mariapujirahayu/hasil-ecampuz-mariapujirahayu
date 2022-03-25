@@ -1,0 +1,6 @@
+//Jawaban Nomor 2
+- Menampilkan nilai tertinggi
+SELECT * FROM tb_mahasiswa, tb_mahasiswa_nilai, tb_matakuliah
+WHERE tb_matakuliah.mk_kode = 'MK303'
+ORDER BY tb_mahasiswa_nilai.nilai DESC
+LIMIT 1
